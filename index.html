@@ -3,14 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>网名</title>
+<style>
+.displaynone{display:none;}
+</style>
 <script src="/js/jquery1102.js"></script>
 <script type="text/javascript">
 function showToast(toast) {
 Fsjs.showToast(toast);
 }
-function showfs() {
-$('.yy').attr('value', 'YY');
-document.getElementById("jscs").innerHTML = "csssss";
+function showfs(c) {
+$('.'+c).removeClass('displaynone');
 }
 </script>
 </head>
@@ -26,6 +28,6 @@ QQ男生网名
 QQ游戏网名
 <p id="jscs"></p>
 <input type="button" value="QQ游戏网" onClick="showfs()" />
-<input class="yy" type="button" value="QQ游戏网" onClick="showToast('QQ游戏网')" />
+<span class="yy displaynone"><input type="button" value="QQ游戏网" onClick="showToast('QQ游戏网')" /></span>
 </body>
 </html>
